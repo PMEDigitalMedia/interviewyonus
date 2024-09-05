@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="post-container">
+        <div class="profile-section">
+            <img src="images/favicon.png" alt="Profile Picture" class="profile-pic">
+            <div class="username">MOHAMMED YOUNUS</div>
+        </div>
+        <div class="post-content">
+            <p>Just enjoying a sunny day at the park! 🌞 #Relaxing #Nature</p>
+        </div>
+        <div class="post-image">
+            <img src="images/OIP.jpeg" alt="Post Image">
+        </div>
+        <div class="post-actions">
+            <button class="like-btn" onclick="likePost()">❤️ Like <span id="like-count">0</span></button>
+            <button class="comment-btn">💬 Comment</button>
+            <button class="share-btn" onclick="sharePost()">🔄 Share</button>
+        </div>
+    </div>
+</body>
+<script>
+    let likeCount = 0;
+
+    function likePost() {
+        likeCount++;
+        document.getElementById('like-count').textContent = likeCount;
+    }
+
+    function sharePost() {
+        alert('Post shared successfully!');
+    }
+</script>
+</html>
